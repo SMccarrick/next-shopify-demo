@@ -40,6 +40,12 @@ app.prepare().then(() => {
         console.log({ shop });
         console.log({ accessToken });
 
+        ctx.cookies.set("shopOrigin", shop, {
+          httpOnly: false,
+          secure: true,
+          sameSite: "none",
+        });
+
         ctx.redirect("/");
       },
     })
