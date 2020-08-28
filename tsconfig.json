@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "sourceMap": true,
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "target": "ES5",
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "isolatedModules": true
+  },
+  "include": [
+    "./pages",
+    "./server"
+  ],
+  "exclude": [
+    "node_modules",
+    "./server/index.ts" // Workaround for next-js isoaltedModules error
+  ]
+}
